@@ -1,0 +1,5 @@
+- [x] Установить upstream web-design-engineer с фиксированным ref только в OpenCode.
+- [x] Диагностировать активный сервер, область чата и семь ошибок plugins.
+- [x] Создать timestamp backup конфигурации и исходников.
+- [x] Выполнить минимальный ремонт либо безопасный карантин несовместимых plugins.
+- [x] Проверить reload, plugin registry, skills, загрузку навыка и API health.

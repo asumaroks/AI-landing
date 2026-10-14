@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS — AI Agents for Enterprise Workflows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================================
+           NEXUS LANDING PAGE v0 — DESIGN TOKENS
+           ============================================================ */
+        :root {
+            /* Colors */
+            --color-primary: #4CAF50;
+            --color-secondary: #0A0A0A;
+            --color-accent: #81C784;
+            --color-white: #FFFFFF;
+            --color-neutral-100: #F8F9FA;
+            --color-neutral-200: #E9ECEF;
+            --color-neutral-300: #6C757D;
+            --color-neutral-900: #343A40;
+
+            /* Typography */
+            --font-heading: "Fraunces", Georgia, serif;
+            --font-body: "DM Sans", system-ui, sans-serif;
+            --font-mono: "JetBrains Mono", monospace;
+
+            /* Spacing */
+            --space-1: 8px;
+            --space-2: 16px;
+            --space-3: 24px;
+            --space-4: 32px;
+            --space-5: 48px;
+            --space-6: 64px;
+            --space-7: 96px;
+
+            /* Border radius */
+            --radius-sm: 4px;
+            --radius-md: 6px;
+            --radius-card: 10px;
+
+            /* Shadows */
+            --shadow-1: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-2: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-3: 0 8px 24px rgba(0,0,0,0.12);
+
+            /* Motion */
+            --transition: 250ms ease-out;
+            --transition-slow: 400ms ease-out;
+        }
+
+        /* Reset */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* Base */
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-neutral-900);
+            background: var(--color-white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--color-secondary);
+            line-height: 1.15;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; letter-spacing: -0.02em; }
+        h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 700; }
+        h3 { font-size: 1.25rem; font-weight: 500; }
+
+        p { color: var(--color-neutral-300); max-width: 65ch; }
+
+        a { color: var(--color-primary); text-decoration: none; }
+
+        /* Utility */
+        .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 var(--space-3); }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: var(--space-1);
+            padding: 14px 28px; font: 500 1rem/1 var(--font-body);
+            border-radius: var(--radius-md); transition: var(--transition);
+            cursor: pointer; border: none;
+        }
+        .btn-primary { background: var(--color-primary); color: var(--color-white); }
+        .btn-primary:hover { background: var(--color-accent); }
+        .btn-outline { background: transparent; color: var(--color-secondary); border: 1.5px solid var(--color-neutral-900); }
+        .btn-outline:hover { border-color: var(--color-primary); color: var(--color-primary); }
+
+        /* Section padding */
+        section { padding: var(--space-7) 0; }
+
+        /* Fade-in animation */
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity var(--transition-slow), transform var(--transition-slow); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ============================================================
+           1. HEADER
+           ============================================================ */
+        .site-header {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--color-white); box-shadow: var(--shadow-1);
+        }
+        .header-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px;
+        }
+        .logo {
+            font: 900 1.5rem/1 var(--font-heading);
+            color: var(--color-secondary); text-decoration: none;
+            display: flex; align-items: center; gap: var(--space-1);
+        }
+        .logo-mark {
+            width: 32px; height: 32px; border-radius: 50%;
+            background: var(--color-primary);
+            display: inline-flex; align-items: center; justify-content: center;
+            color: var(--color-white); font: 700 1rem/1 var(--font-body);
+        }
+        .main-nav { display: flex; align-items: center; gap: var(--space-4); }
+        .main-nav a {
+            font: 500 0.9rem/1 var(--font-body); color: var(--color-neutral-900);
+            transition: color var(--transition);
+        }
+        .main-nav a:hover { color: var(--color-primary); }
+        .nav-cta {
+            padding: 10px 20px !important;
+            background: var(--color-secondary); color: var(--color-white) !important;
+            border-radius: var(--radius-md);
+        }
+        .nav-cta:hover { background: var(--color-primary); }
+
+        /* Mobile nav */
+        .menu-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 1.5rem; color: var(--color-secondary); }
+
+        /* ============================================================
+           2. HERO
+           ============================================================ */
+        .hero { padding: var(--space-7) 0; background: var(--color-white); }
+        .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); align-items: center; }
+        .hero-content .eyebrow {
+            font: 500 0.8rem/1 var(--font-mono); color: var(--color-primary);
+            text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-2);
+        }
+        .hero-content h1 { margin-bottom: var(--space-3); }
+        .hero-content p { margin-bottom: var(--space-4); font-size: 1.1rem; }
+        .hero-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+
+        /* Product Dashboard Visual — placeholder */
+        .hero-visual {
+            aspect-ratio: 4/3; background: var(--color-neutral-100);
+            border-radius: var(--radius-card); box-shadow: var(--shadow-3);
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid var(--color-neutral-200);
+        }
+        .hero-visual span {
+            font: 400 0.85rem/1 var(--font-mono); color: var(--color-neutral-300);
+        }
+
+        /* ============================================================
+           3. PRODUCT DEMO
+           ============================================================ */
+        .demo { background: var(--color-neutral-100); }
+        .demo-inner { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); align-items: center; }
+        .demo-visual {
+            aspect-ratio: 16/9; background: var(--color-white);
+            border-radius: var(--radius-card); box-shadow: var(--shadow-2);
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid var(--color-neutral-200);
+        }
+        .demo-visual span {
+            font: 400 0.85rem/1 var(--font-mono); color: var(--color-neutral-300);
+        }
+        .demo-content h2 { margin-bottom: var(--space-2); }
+        .demo-content p { margin-bottom: var(--space-3); }
+
+        /* ============================================================
+           4. FEATURES
+           ============================================================ */
+        .features { background: var(--color-white); }
+        .features-header { text-align: center; margin-bottom: var(--space-5); }
+        .features-header h2 { margin-bottom: var(--space-2); }
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+        .feature-card {
+            padding: var(--space-4); background: var(--color-white);
+            border: 1px solid var(--color-neutral-200); border-radius: var(--radius-card);
+            box-shadow: var(--shadow-1); transition: var(--transition);
+        }
+        .feature-card:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
+        .feature-card h3 { margin-bottom: var(--space-2); }
+        .feature-icon {
+            width: 48px; height: 48px; background: var(--color-neutral-100);
+            border-radius: var(--radius-md); margin-bottom: var(--space-3);
+            display: flex; align-items: center; justify-content: center;
+            font: 400 0.75rem/1 var(--font-mono); color: var(--color-primary);
+        }
+
+        /* ============================================================
+           5. INTEGRATIONS — DARK SECTION
+           ============================================================ */
+        .integrations { background: var(--color-secondary); }
+        .integrations .section-label { color: var(--color-accent); }
+        .integrations h2 { color: var(--color-white); }
+        .integrations .section-subtitle { color: var(--color-neutral-300); }
+        .section-label {
+            font: 500 0.8rem/1 var(--font-mono); text-transform: uppercase;
+            letter-spacing: 0.08em; color: var(--color-primary); margin-bottom: var(--space-2);
+            display: block;
+        }
+        .section-subtitle { margin-bottom: var(--space-4); }
+        .integrations-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3);
+        }
+        .integration-card {
+            padding: var(--space-4); background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-card);
+            text-align: center;
+        }
+        .integration-card h3 { color: var(--color-white); margin-bottom: var(--space-1); }
+        .integration-card p { font-size: 0.85rem; color: var(--color-neutral-300); }
+        .integration-logo {
+            width: 56px; height: 56px; margin: 0 auto var(--space-2);
+            background: rgba(255,255,255,0.08); border-radius: var(--radius-md);
+            display: flex; align-items: center; justify-content: center;
+            font: 400 0.7rem/1 var(--font-mono); color: var(--color-accent);
+        }
+
+        /* ============================================================
+           6. FINAL CTA
+           ============================================================ */
+        .cta { background: var(--color-white); text-align: center; }
+        .cta h2 { margin-bottom: var(--space-2); }
+        .cta p { margin: 0 auto var(--space-4); text-align: center; }
+
+        /* ============================================================
+           7. FOOTER
+           ============================================================ */
+        .site-footer {
+            background: var(--color-secondary); color: var(--color-neutral-300);
+            padding: var(--space-5) 0 var(--space-3);
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-4);
+            margin-bottom: var(--space-5);
+        }
+        .footer-brand .logo { color: var(--color-white); margin-bottom: var(--space-2); }
+        .footer-brand p { font-size: 0.85rem; max-width: 30ch; }
+        .footer-col h4 { color: var(--color-white); font: 500 0.85rem/1 var(--font-body); margin-bottom: var(--space-2); }
+        .footer-col a { display: block; font-size: 0.85rem; color: var(--color-neutral-300); padding: 4px 0; transition: color var(--transition); }
+        .footer-col a:hover { color: var(--color-accent); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-3);
+            text-align: center; font-size: 0.8rem;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 768px) {
+            .hero-inner, .demo-inner { grid-template-columns: 1fr; }
+            .hero-visual { order: -1; }
+            .features-grid { grid-template-columns: 1fr; }
+            .integrations-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .menu-toggle { display: block; }
+            .main-nav {
+                display: none; position: absolute; top: 64px; left: 0; right: 0;
+                background: var(--color-white); flex-direction: column;
+                padding: var(--space-3); gap: var(--space-2);
+                box-shadow: var(--shadow-2);
+            }
+            .main-nav.open { display: flex; }
+        }
+        @media (max-width: 480px) {
+            .integrations-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         1. HEADER — Logo + Navigation
+         ============================================================ -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo"><span class="logo-mark">N</span>NEXUS</a>
+            <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+            <nav class="main-nav">
+                <a href="#features">Features</a>
+                <a href="#demo">Demo</a>
+                <a href="#integrations">Integrations</a>
+                <a href="#cta" class="nav-cta">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============================================================
+             2. HERO — Headline + Subheadline + CTAs + Dashboard Visual
+             ============================================================ -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content reveal">
+                    <span class="eyebrow">AI Agents for Enterprise</span>
+                    <h1>Automate Your Enterprise Workflows with Intelligent AI Agents</h1>
+                    <p>NEXUS builds AI agents that collaborate across your existing systems — CRM, ERP, databases — to automate complex workflows end-to-end. [real data needed: specific enterprise outcomes]</p>
+                    <div class="hero-actions">
+                        <a href="#cta" class="btn btn-primary">Request a Demo</a>
+                        <a href="#demo" class="btn btn-outline">See How It Works</a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal">
+                    <span>[image: Product Dashboard]</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             3. PRODUCT DEMO — Interactive visualization placeholder
+             ============================================================ -->
+        <section class="demo" id="demo">
+            <div class="container demo-inner">
+                <div class="demo-visual reveal">
+                    <span>[image: Interactive Agent Workflow Visualization]</span>
+                </div>
+                <div class="demo-content reveal">
+                    <h2>Watch Agents Collaborate in Real Time</h2>
+                    <p>NEXUS agents work together — planning, executing, and verifying each step of your workflow. See how a multi-agent system processes an enterprise request from intake to completion.</p>
+                    <p>[demo placeholder: interactive visualization showing agent handoffs, decision points, and execution status]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             4. FEATURES — Multi-Agent Collaboration + Workflow Automation
+             ============================================================ -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="features-header reveal">
+                    <h2>Built for Enterprise Complexity</h2>
+                    <p>Two core capabilities that handle the workflows other AI tools can't.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">[icon]</div>
+                        <h3>Multi-Agent Collaboration</h3>
+                        <p>Multiple AI agents with specialized roles work together on complex tasks — researching, drafting, reviewing, and executing in coordinated sequences. [real data needed: specific collaboration outcomes]</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">[icon]</div>
+                        <h3>Workflow Automation</h3>
+                        <p>Connect NEXUS to your existing enterprise systems and automate end-to-end workflows without replacing your infrastructure. Agents handle the handoffs. [real data needed: specific automation metrics]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             5. INTEGRATIONS — Enterprise systems (dark section)
+             ============================================================ -->
+        <section class="integrations" id="integrations">
+            <div class="container">
+                <span class="section-label reveal">Integrations</span>
+                <h2 class="reveal">Connects to Your Stack</h2>
+                <p class="section-subtitle reveal">Agents operate across the systems your team already uses.</p>
+                <div class="integrations-grid">
+                    <div class="integration-card reveal">
+                        <div class="integration-logo">[logo]</div>
+                        <h3>CRM Systems</h3>
+                        <p>Salesforce, HubSpot, Dynamics 365</p>
+                    </div>
+                    <div class="integration-card reveal">
+                        <div class="integration-logo">[logo]</div>
+                        <h3>ERP Platforms</h3>
+                        <p>SAP, Oracle, NetSuite</p>
+                    </div>
+                    <div class="integration-card reveal">
+                        <div class="integration-logo">[logo]</div>
+                        <h3>Databases</h3>
+                        <p>PostgreSQL, Snowflake, BigQuery</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             6. FINAL CTA — Call to action
+             ============================================================ -->
+        <section class="cta" id="cta">
+            <div class="container reveal">
+                <h2>Ready to Automate Your Workflows?</h2>
+                <p>See how NEXUS agents can work within your existing systems. [real data needed: specific value proposition]</p>
+                <a href="#" class="btn btn-primary">Request Enterprise Demo</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================
+         7. FOOTER — Logo, links, copyright
+         ============================================================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo"><span class="logo-mark">N</span>NEXUS</a>
+                    <p>AI agents for enterprise workflows. Built for complexity, designed for clarity.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#demo">Demo</a>
+                    <a href="#integrations">Integrations</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Security</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEXUS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         SCRIPTS — IntersectionObserver fade-in + Mobile menu
+         ============================================================ -->
+    <script>
+        // Mobile menu toggle
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => nav.classList.toggle('open'));
+        }
+
+        // IntersectionObserver for fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
