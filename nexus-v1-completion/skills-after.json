@@ -1,0 +1,258 @@
+[
+  {
+    "id": "opencode",
+    "path": "/builtin/opencode.md"
+  },
+  {
+    "id": "report",
+    "path": "/builtin/report.md"
+  },
+  {
+    "id": "brainstorming",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\brainstorming\\SKILL.md"
+  },
+  {
+    "id": "diagnosing-superpowers",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\diagnosing-superpowers\\SKILL.md"
+  },
+  {
+    "id": "dispatching-parallel-agents",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\dispatching-parallel-agents\\SKILL.md"
+  },
+  {
+    "id": "executing-plans",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\executing-plans\\SKILL.md"
+  },
+  {
+    "id": "finishing-a-development-branch",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\finishing-a-development-branch\\SKILL.md"
+  },
+  {
+    "id": "receiving-code-review",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\receiving-code-review\\SKILL.md"
+  },
+  {
+    "id": "requesting-code-review",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\requesting-code-review\\SKILL.md"
+  },
+  {
+    "id": "subagent-driven-development",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\subagent-driven-development\\SKILL.md"
+  },
+  {
+    "id": "systematic-debugging",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\systematic-debugging\\SKILL.md"
+  },
+  {
+    "id": "test-driven-development",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\test-driven-development\\SKILL.md"
+  },
+  {
+    "id": "using-git-worktrees",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\using-git-worktrees\\SKILL.md"
+  },
+  {
+    "id": "using-superpowers",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\using-superpowers\\SKILL.md"
+  },
+  {
+    "id": "verification-before-completion",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\verification-before-completion\\SKILL.md"
+  },
+  {
+    "id": "writing-plans",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\writing-plans\\SKILL.md"
+  },
+  {
+    "id": "writing-skills",
+    "path": "C:\\Users\\Alex\\.cache\\opencode\\npm\\git-superpowers-0958a5557860\\1791866813106\\node_modules\\superpowers\\skills\\writing-skills\\SKILL.md"
+  },
+  {
+    "id": "cua-driver",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\cua-driver\\SKILL.md"
+  },
+  {
+    "id": "officecli",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\officecli\\SKILL.md"
+  },
+  {
+    "id": "compose-install-deps",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\compose-install-deps\\SKILL.md"
+  },
+  {
+    "id": "find-skills",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\find-skills\\SKILL.md"
+  },
+  {
+    "id": "install-composer-deps",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\install-composer-deps\\SKILL.md"
+  },
+  {
+    "id": "opentui",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\opentui\\SKILL.md"
+  },
+  {
+    "id": "paleo-auto",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\paleo-auto\\SKILL.md"
+  },
+  {
+    "id": "paleo-budget",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\paleo-budget\\SKILL.md"
+  },
+  {
+    "id": "paleo-converse",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\paleo-converse\\SKILL.md"
+  },
+  {
+    "id": "paleo-json",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\paleo-json\\SKILL.md"
+  },
+  {
+    "id": "paleo-summary",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\paleo-summary\\SKILL.md"
+  },
+  {
+    "id": "paleo-trim-context",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\paleo-trim-context\\SKILL.md"
+  },
+  {
+    "id": "paleo",
+    "path": "C:\\Users\\Alex\\.agents\\skills\\paleo\\SKILL.md"
+  },
+  {
+    "id": "brandkit",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\brandkit\\SKILL.md"
+  },
+  {
+    "id": "chatgpt-apps",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\chatgpt-apps\\SKILL.md"
+  },
+  {
+    "id": "cli-creator",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\cli-creator\\SKILL.md"
+  },
+  {
+    "id": "cli-for-agents",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\cli-for-agents\\SKILL.md"
+  },
+  {
+    "id": "code-review",
+    "path": "C:\\Users\\Alex\\.opencode\\skills\\code-review\\SKILL.md"
+  },
+  {
+    "id": "codebase-design",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\codebase-design\\SKILL.md"
+  },
+  {
+    "id": "connector-googlemail",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\connector-googlemail\\SKILL.md"
+  },
+  {
+    "id": "define-goal",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\define-goal\\SKILL.md"
+  },
+  {
+    "id": "frontend-design",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\frontend-design\\SKILL.md"
+  },
+  {
+    "id": "google-drive",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\google-drive\\SKILL.md"
+  },
+  {
+    "id": "grill-me",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\grill-me\\SKILL.md"
+  },
+  {
+    "id": "grill-with-docs",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\grill-with-docs\\SKILL.md"
+  },
+  {
+    "id": "grilling",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\grilling\\SKILL.md"
+  },
+  {
+    "id": "handoff",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\handoff\\SKILL.md"
+  },
+  {
+    "id": "imagegen",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\imagegen\\SKILL.md"
+  },
+  {
+    "id": "impeccable",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\impeccable\\SKILL.md"
+  },
+  {
+    "id": "mcp-builder",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\mcp-builder\\SKILL.md"
+  },
+  {
+    "id": "open-computer-use",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\open-computer-use\\SKILL.md"
+  },
+  {
+    "id": "pdf",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\pdf\\SKILL.md"
+  },
+  {
+    "id": "playwright-interactive",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\playwright-interactive\\SKILL.md"
+  },
+  {
+    "id": "playwright",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\playwright\\SKILL.md"
+  },
+  {
+    "id": "plugin-creator",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\plugin-creator\\SKILL.md"
+  },
+  {
+    "id": "skill-creator",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\skill-creator\\SKILL.md"
+  },
+  {
+    "id": "skill-installer",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\skill-installer\\SKILL.md"
+  },
+  {
+    "id": "superdesign",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\superdesign\\SKILL.md"
+  },
+  {
+    "id": "ui-ux-pro-max",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\ui-ux-pro-max\\SKILL.md"
+  },
+  {
+    "id": "web-artifacts-builder",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\web-artifacts-builder\\SKILL.md"
+  },
+  {
+    "id": "web-design-engineer",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\web-design-engineer\\SKILL.md"
+  },
+  {
+    "id": "webapp-testing",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\webapp-testing\\SKILL.md"
+  },
+  {
+    "id": "yeet",
+    "path": "C:\\Users\\Alex\\.config\\opencode\\skills\\yeet\\SKILL.md"
+  },
+  {
+    "id": "code-philosophy",
+    "path": "C:\\Users\\Alex\\.opencode\\skills\\code-philosophy\\SKILL.md"
+  },
+  {
+    "id": "frontend-philosophy",
+    "path": "C:\\Users\\Alex\\.opencode\\skills\\frontend-philosophy\\SKILL.md"
+  },
+  {
+    "id": "plan-protocol",
+    "path": "C:\\Users\\Alex\\.opencode\\skills\\plan-protocol\\SKILL.md"
+  },
+  {
+    "id": "plan-review",
+    "path": "C:\\Users\\Alex\\.opencode\\skills\\plan-review\\SKILL.md"
+  }
+]
